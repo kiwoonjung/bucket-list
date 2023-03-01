@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 
-import AllBucketListsPag from "./pages/AllBuketLists";
+import AllBucketListsPage from "./pages/AllBuketLists";
 import NewBucketListPage from "./pages/NewBuketList";
 import FavoritePage from "./pages/Favorites";
 import Layout from "./components/layout/Layout";
@@ -10,7 +10,7 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact>
-          <AllBucketListsPag />
+          <AllBucketListsPage />
         </Route>
         <Route path="/new-bucket-list">
           <NewBucketListPage />

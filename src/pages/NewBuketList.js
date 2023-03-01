@@ -1,5 +1,12 @@
+import NewBucketListForm from "../components/bucketlists/NewBucketListForm";
+
 function NewBucketListPage() {
-  return <div>New Bucket List Page</div>;
+  return (
+    <section>
+      <h1>Add New BucketList</h1>
+      <NewBucketListForm />
+    </section>
+  );
 }
 
 export default NewBucketListPage;
