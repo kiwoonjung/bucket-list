@@ -1,3 +1,5 @@
+import BucketList from "../components/bucketlists/BucketList";
+
 const DUMMY_DATA = [
   {
     id: "m1",
@@ -23,11 +25,7 @@ function AllBucketListsPage() {
   return (
     <section>
       <h1>All Bucket Lists</h1>
-      <ul>
-        {DUMMY_DATA.map((bucketlist) => {
-          return <li key={bucketlist.id}>{bucketlist.title}</li>;
-        })}
-      </ul>
+      <BucketList bucketlists={DUMMY_DATA} />
     </section>
   );
 }
