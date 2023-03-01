@@ -21,7 +21,7 @@ function NewBucketListForm(props) {
       title: enteredTitle,
       image: enteredImage,
       address: enteredAddress,
-      descripion: enteredDescription,
+      description: enteredDescription,
     };
 
     props.onAddBucketList(bucketListData);
