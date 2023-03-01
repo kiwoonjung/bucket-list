@@ -3,12 +3,11 @@ import { Route, Switch } from "react-router-dom";
 import AllBucketListsPag from "./pages/AllBuketLists";
 import NewBucketListPage from "./pages/NewBuketList";
 import FavoritePage from "./pages/Favorites";
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div>
-      <MainNavigation />
+    <Layout>
       <Switch>
         <Route path="/" exact>
           <AllBucketListsPag />
@@ -20,7 +19,7 @@ function App() {
           <FavoritePage />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 }
 
