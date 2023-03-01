@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Card from "../ui/Card";
 import classes from "./NewBucketListForm.module.css";
 
-function NewBucketListForm() {
+function NewBucketListForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
@@ -17,14 +17,14 @@ function NewBucketListForm() {
     const enteredAddress = addressInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
 
-    const bucketData = {
+    const bucketListData = {
       title: enteredTitle,
       image: enteredImage,
-      addess: enteredAddress,
+      address: enteredAddress,
       descripion: enteredDescription,
     };
 
-    console.log(bucketData);
+    props.onAddBucketList(bucketListData);
   }
 
   return (

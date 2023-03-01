@@ -1,10 +1,23 @@
 import NewBucketListForm from "../components/bucketlists/NewBucketListForm";
 
 function NewBucketListPage() {
+  function addBucketListHandler(bucketListData) {
+    fetch(
+      "https://bucket-list-cc849-default-rtdb.firebaseio.com/bucketlists.json",
+      {
+        method: "POST",
+        body: JSON.stringify(bucketListData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  }
+
   return (
     <section>
       <h1>Add New BucketList</h1>
-      <NewBucketListForm />
+      <NewBucketListForm onAddBucketList={addBucketListHandler} />
     </section>
   );
 }
